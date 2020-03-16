@@ -349,23 +349,25 @@
 
 <h1 id="开始升级">开始升级</h1>
 
-<p>因为官网的升级步骤都一个版本一个升级，这里是直接升级从 5.2 到  6.0 LTS 作为一个跨度，将每个版本的逐级升级总结出来
-* 打开 composer.json 文件，laravel 版本从 5.2.* 修改成 \^6.0, 另外还应该将 fideloper/proxy 依赖关系更新至 ~4.0
-* 在 require-dev 部分下修改 symfony/css-selector 和 symfony/dom-crawler 到 ~4.0，修改 phpunit/phpunit 到 ~7.0，添加 &ldquo;filp/whoops&rdquo;:&rdquo;~2.0&rdquo;，修改 fzaninotto/faker 到 ~1.4，修改 barryvdh/laravel-ide-helper 到 \^2.6.6，修改 barryvdh/laravel-debugbar 到 \^3.2.8，具体如下：</p>
-
-<pre><code>&quot;require-dev&quot;: {
-    &quot;fzaninotto/faker&quot;: &quot;~1.4&quot;,
-    &quot;mockery/mockery&quot;: &quot;0.9.*&quot;,
-    &quot;phpunit/phpunit&quot;: &quot;~7.0&quot;,
-    &quot;barryvdh/laravel-ide-helper&quot;: &quot;^2.6.6&quot;,
-    &quot;barryvdh/laravel-debugbar&quot;: &quot;^3.2.8&quot;,
-    &quot;symfony/css-selector&quot;: &quot;~4.0&quot;,
-    &quot;symfony/dom-crawler&quot;: &quot;~4.0&quot;,
-    &quot;filp/whoops&quot;: &quot;~2.0&quot;
-  }
-</code></pre>
+<p>因为官网的升级步骤都一个版本一个升级，这里是直接升级从 5.2 到  6.0 LTS 作为一个跨度，将每个版本的逐级升级总结出来</p>
 
 <ul>
+<li><p>打开 composer.json 文件，laravel 版本从 5.2.* 修改成 ^6.0, 另外还应该将 fideloper/proxy 依赖关系更新至 ~4.0</p></li>
+
+<li><p>在 require-dev 部分下修改 symfony/css-selector 和 symfony/dom-crawler 到 ~4.0，修改 phpunit/phpunit 到 ~7.0，添加 &ldquo;filp/whoops&rdquo;:&rdquo;~2.0&rdquo;，修改 fzaninotto/faker 到 ~1.4，修改 barryvdh/laravel-ide-helper 到 ^2.6.6，修改 barryvdh/laravel-debugbar 到 ^3.2.8，具体如下：</p>
+
+<pre><code>&quot;require-dev&quot;: {
+&quot;fzaninotto/faker&quot;: &quot;~1.4&quot;,
+&quot;mockery/mockery&quot;: &quot;0.9.*&quot;,
+&quot;phpunit/phpunit&quot;: &quot;~7.0&quot;,
+&quot;barryvdh/laravel-ide-helper&quot;: &quot;^2.6.6&quot;,
+&quot;barryvdh/laravel-debugbar&quot;: &quot;^3.2.8&quot;,
+&quot;symfony/css-selector&quot;: &quot;~4.0&quot;,
+&quot;symfony/dom-crawler&quot;: &quot;~4.0&quot;,
+&quot;filp/whoops&quot;: &quot;~2.0&quot;
+}
+</code></pre></li>
+
 <li><p>在 scripts 部分添加一个额外的 package</p>
 
 <pre><code>&quot;scripts&quot;: {
